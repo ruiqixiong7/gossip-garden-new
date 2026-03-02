@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Gossip Garden</title>
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #ffffff;
+      background: #000; /* fallback only */
+    }
+
+    canvas {
+      display: block;
+    }
+
+    /* UI container */
+    #ui {
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      padding: 18px 20px;
+      border-radius: 14px;
+
+      background: rgba(15, 18, 25, 0.55);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.35),
+        inset 0 0 0 1px rgba(255,255,255,0.05);
+
+      width: 260px;
+    }
+
+    /* Title */
+    #ui h1 {
+      margin: 0 0 10px 0;
+      font-weight: 500;
+      font-size: 20px;
+      letter-spacing: 0.04em;
+    }
+
+    /* Dropdown */
+    #seed {
+      width: 100%;
+      padding: 6px 8px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 400;
+
+      background: rgba(255,255,255,0.1);
+      color: white;
+
+      margin-bottom: 12px;
+    }
+
+    #seed option {
+      color: black;
+    }
+
+    /* Stats block */
+    #stats {
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 300;
+      opacity: 0.85;
+      letter-spacing: 0.02em;
+    }
+
+    /* Small aesthetic tweak for numbers */
+    #stats strong {
+      font-weight: 500;
+    }
+  </style>
+
+  <!-- p5 -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+</head>
+
+<body>
+
+  <div id="ui">
+    <h1>Gossip Garden</h1>
+
+    <select id="seed"></select>
+
+    <div id="stats"></div>
+  </div>
+
+  <script src="sketch.js"></script>
+</body>
+</html>

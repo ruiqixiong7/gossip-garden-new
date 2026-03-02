@@ -1,0 +1,16 @@
+{
+  "name": "gossip-garden",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "scrape": "node scrape/scrape_wiki.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cheerio": "^...",
+    "dotenv": "^...",
+    "express": "^...",
+    "node-fetch": "^..."
+  }
+}
